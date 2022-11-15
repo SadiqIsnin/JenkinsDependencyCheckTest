@@ -3,6 +3,7 @@ pipeline {
 	stages {
 		stage('OWASP DependencyCheck') {
 			steps {
+				echo 'OWASP Dependency Check'
 				dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
 			}
 		}
